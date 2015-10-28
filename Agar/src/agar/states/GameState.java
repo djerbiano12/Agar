@@ -41,8 +41,8 @@ public class GameState extends BasicGameState{
 		boules = new ArrayList<Agar>();
 		
 		for(int i=0; i<nbrAgars; i++){
-			int posxAleatoire = rand.nextInt(Window.WIDTH  + 1);
-			int posyAleatoire = rand.nextInt(Window.HEIGHT + 1);
+			int posxAleatoire = rand.nextInt((Window.WIDTH - 5)  + 1);
+			int posyAleatoire = rand.nextInt((Window.HEIGHT - 5) + 1);
 			int vert  = (int)(Math.random()*255.99);
             int bleu  = (int)(Math.random()*255.99);
             int rouge = (int)(Math.random()*255.99);
