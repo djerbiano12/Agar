@@ -31,13 +31,13 @@ public class GameState extends BasicGameState{
 	private List<Agar> boules;
 	private int nbrAgars = 20;
 	Random rand = new Random();
-	private int score;
+	public static int score;
 
 	
 	@Override
 	public void init(GameContainer gc, StateBasedGame s) throws SlickException {
 		me = new Agar(new Point(400,300),Color.blue,30,30);
-		this.score = 0;
+		GameState.score = 0;
 		boules = new ArrayList<Agar>();
 		
 		for(int i=0; i<nbrAgars; i++){
@@ -54,7 +54,7 @@ public class GameState extends BasicGameState{
 	public void render(GameContainer gc, StateBasedGame s, Graphics g) throws SlickException {
 		g.setBackground(Color.white);
 		g.setColor(Color.red);
-		g.drawString("Score = "+this.score, 0, 0);
+		g.drawString("Score = "+GameState.score, 0, 0);
 		for(int i=0; i<boules.size();i++){
 			boules.get(i).dessiner(g);
 		}
@@ -135,7 +135,7 @@ public class GameState extends BasicGameState{
 				this.boules.get(i).setPosition(new Point(1000,1000));
 				me.setHauteur(me.getHauteur()+5);
 				me.setLargeur(me.getLargeur()+5);
-				this.score += 10;	
+				GameState.score += 10;	
 			}
 		}
 	}

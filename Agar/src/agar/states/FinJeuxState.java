@@ -1,5 +1,6 @@
 package agar.states;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -17,7 +18,10 @@ public class FinJeuxState extends BasicGameState {
 	@Override
 	public void render(GameContainer gc, StateBasedGame s, Graphics g)
 			throws SlickException {
-		g.drawString("Félicitation vous avez tous mangés !!!", 250, 300);
+		g.setColor(Color.blue);
+		g.drawString("Félicitation vous avez tout mangé !!!", 250, 250);
+		g.setColor(Color.red);
+		g.drawString("Score finale = "+GameState.score, 320, 280);
 		
 	}
 
