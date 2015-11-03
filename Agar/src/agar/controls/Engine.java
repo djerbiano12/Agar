@@ -23,6 +23,9 @@ public class Engine extends StateBasedGame {
 		gc.setShowFPS(false);
 		gc.setVSync(true);
 		
+		/******************************************
+		 * ajout des differents states dans le jeux
+		 ******************************************/
 		this.addState(new GameState());
 		this.addState(new FinJeuxState());
 		

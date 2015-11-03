@@ -18,10 +18,13 @@ public class FinJeuxState extends BasicGameState {
 	@Override
 	public void render(GameContainer gc, StateBasedGame s, Graphics g)
 			throws SlickException {
+		/*************************
+		 * Signaler la fin du jeu
+		 *************************/
 		g.setColor(Color.blue);
 		g.drawString("Félicitation vous avez tout mangé !!!", 250, 250);
 		g.setColor(Color.red);
-		g.drawString("Score finale = "+GameState.score, 320, 280);
+		g.drawString("Score final = "+GameState.score, 320, 280);
 		
 	}
 

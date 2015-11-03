@@ -52,6 +52,9 @@ public class Agar {
 		this.largeur = largeur;
 	}
 	
+	/***************************************************************
+	 * Cette fonction permet d'affiche l'Agar sur l'interface du jeu
+	 ***************************************************************/
 	public void dessiner(Graphics g){
 		g.setColor(this.couleur);
 		g.fillOval(this.position.x, this.position.y, this.largeur, this.hauteur);	
